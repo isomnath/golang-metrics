@@ -105,7 +105,7 @@ func StartExternalSegmentNow(txn newrelic.Transaction, url string) *newrelic.Ext
 	return &s
 }
 
-func NewHttpContext(ctx context.Context, w http.ResponseWriter) context.Context {
+func NewHTTPContext(ctx context.Context, w http.ResponseWriter) context.Context {
 	if newrelicApp != nil {
 		tx, ok := w.(newrelic.Transaction)
 		if !ok {

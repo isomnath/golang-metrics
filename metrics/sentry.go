@@ -46,7 +46,6 @@ func CaptureErrorWithTags(err error, tags map[string]string) {
 	}
 }
 
-
 var warnTags = map[string]string{
 	"level": string(raven.WARNING),
 }
